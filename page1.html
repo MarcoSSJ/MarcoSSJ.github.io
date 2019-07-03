@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>孙士杰的个人主页</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 10em 3em 1fr 6em;
+            grid-template-areas: 'h h' 'n n' 'r r' 'f f';
+            font-family: Arial;
+            background-image: url("./hubo.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .header {
+            border-radius: 25px;
+            grid-area: h;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .header h1 {
+            font-size: 50px;
+        }
+        
+        .nav {
+            border-radius: 25px;
+            grid-area: n;
+            background-color: rgb(36, 6, 6);
+        }
+        
+        .nav a {
+            display: block;
+            float: left;
+            color: rgb(255, 255, 255);
+            text-align: left;
+            padding: 10px 10px;
+            text-decoration: underline;
+        }
+        
+        .nav a:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(93, 76, 151);
+        }
+        
+        .right {
+            grid-area: r;
+            padding: 10px;
+            justify-items: left;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .card {
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .card a {
+            font-size: 25px;
+            text-decoration: none;
+        }
+        
+        .card #links p ul li a {
+            font-size: 10px;
+            text-decoration: none;
+        }
+        
+        .footer {
+            border-radius: 25px;
+            grid-area: f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>孙士杰的个人主页</h1>
+        <p>Hello World！</p>
+    </div>
+
+    <div class="nav">
+        <a href="./mainpage.html">主页</a>
+        <a href="./page1.html">日志1</a>
+        <a href="./page2.html">日志2</a>
+    </div>
+
+    <div class="right">
+
+        <div class="card">
+            <b><a href="./page1.html" target="_blank">我想说的</a></b>
+            <h5>2019 年 7 月 2 日</h5>
+            <img src="./ximalaya_shanmai-010.jpg" alt="pic" style="width:100%;">
+            <p>之前对前端的了解其实并不多，只是大概知道是做一个网站展示给用户看的那一面，涉及到很多美工、 设计方面的内容。希望通过这三周的学习，对于前端究竟是什么能有更为清楚的认识，也能够做一点自己想做的事情。 毕竟将来也有可能靠这个吃饭不是？另外，也希望通过这门课程，能够了解到一些 工业界的工作行为和方法，提早了解现状对于我们来说也是非常重要的一件事。 （之前听人说前端其实挺容易上手的但是自己真正上手做了才发现其实也不完全是那么一回事，感觉有的东西还是 有些复杂的，希望能够顺利完成这门课程的学习吧。）希望老师在接下来的面授环节中能够讲得更细致一些，感觉
+                很多东西在细节还是有坑，而且过得有点快有时理解上确实有点问题……接下来的两周多时间里可能会对老师和助教多有打扰， 在这里先表达一下感谢，感谢有老师和助教的指点，让我们对所学的知识有更清楚的认识，能够更顺利地完成各项工作。 望一切顺利！
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Tel:18801290186 E-mail:sunsj16@mails.tsinghua.edu.cn<br> written by 孙士杰<br></p>
+    </div>
+
+</body>
+
+</html>

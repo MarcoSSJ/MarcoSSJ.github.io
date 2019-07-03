@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>孙士杰的个人主页</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 10em 3em 1fr 6em;
+            grid-template-areas: 'h h' 'n n' 'l r' 'f f';
+            font-family: Arial;
+            background-image: url("./hubo.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .header {
+            border-radius: 25px;
+            grid-area: h;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .header h1 {
+            font-size: 50px;
+        }
+        
+        .nav {
+            border-radius: 25px;
+            grid-area: n;
+            background-color: rgb(36, 6, 6);
+        }
+        
+        .nav a {
+            display: block;
+            float: left;
+            color: rgb(255, 255, 255);
+            text-align: left;
+            padding: 10px 10px;
+            text-decoration: underline;
+        }
+        
+        .nav a:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(93, 76, 151);
+        }
+        
+        .left {
+            grid-area: l;
+            padding: 10px;
+            justify-items: left;
+        }
+        
+        .right {
+            grid-area: r;
+            padding: 10px;
+            justify-items: left;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .card {
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .card a {
+            font-size: 25px;
+            text-decoration: none;
+        }
+        
+        .card #links p ul li a {
+            font-size: 10px;
+            text-decoration: none;
+        }
+        
+        .footer {
+            border-radius: 25px;
+            grid-area: f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>孙士杰的个人主页</h1>
+        <p>Hello World！</p>
+    </div>
+
+    <div class="nav">
+        <a href="./mainpage.html">主页</a>
+        <a href="./page1.html">日志1</a>
+        <a href="./page2.html">日志2</a>
+    </div>
+
+    <div class="left">
+
+        <div class="card">
+            <h2>关于我</h2>
+            <img src="./me.jpg" alt="me" style="width:100%">
+            <ul>
+                <li>姓名：孙士杰</li>
+                <li>电话：18801290186</li>
+                <li>微信：18801290186</li>
+                <li>邮箱：sunsj16@mails.tsinghua.edu.cn</li>
+            </ul>
+            <p>1998年3月8日生于重庆，现就读于清华大学软件学院。</p>
+        </div>
+
+        <div class="card">
+            <h3>热门文章</h3>
+            <h4><a href="./mainpage.html">我想说的</a></h4>
+            <img src="./ximalaya_shanmai-010.jpg" alt="pic" style="width:100%">
+            <p>之前对前端的了解其实并不多……</p>
+        </div>
+
+        <div class="card" id="links">
+            <h3>友情链接</h3>
+            <p>
+                <ul>
+                    <li><a href="http://www.tsinghua.edu.cn" target="_blank">清华大学</a></li>
+                    <li><a href="http://www.nks.edu.cn/" target="_blank">重庆南开中学</a></li>
+                </ul>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <div class="card">
+            <b><a href="./page1.html" target="_blank">我想说的</a></b>
+            <h5>2019 年 7 月 2 日</h5>
+            <img src="./ximalaya_shanmai-010.jpg" alt="pic" style="width: 100%">
+            <p>之前对前端的了解其实并不多，只是大概知道是做一个网站展示给用户看的那一面，涉及到很多美工、 设计方面的内容。希望通过这三周的学习……
+            </p>
+        </div>
+
+        <div class="card">
+            <b><a href="./page2.html" target="_blank">基础实验2</a></b>
+            <h5>2019 年 7 月 3 日</h5>
+            <img src="./chongqing-006.jpg" alt="pic" style="width:100%">
+            <p>still writing……</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Tel:18801290186 E-mail:sunsj16@mails.tsinghua.edu.cn<br> written by 孙士杰<br></p>
+    </div>
+
+</body>
+
+</html>
