@@ -13,7 +13,7 @@
             display: grid;
             grid-template-columns: 25% 75%;
             grid-template-rows: 10em 3em 1fr 6em;
-            grid-template-areas: 'h h' 'n n' 'l r' 'f f';
+            grid-template-areas: 'h h' 'n n' 'r r' 'f f';
             font-family: Arial;
             background-image: url("./hubo.jpg");
             background-repeat: no-repeat;
@@ -51,12 +51,6 @@
         .nav a:hover {
             background-color: rgb(255, 255, 255);
             color: rgb(93, 76, 151);
-        }
-        
-        .left {
-            grid-area: l;
-            padding: 10px;
-            justify-items: left;
         }
         
         .right {
@@ -109,63 +103,21 @@
         <a href="./index.html">主页</a>
         <a href="./page1.html">日志1</a>
         <a href="./page2.html">日志2</a>
-    </div>
-
-    <div class="left">
-
-        <div class="card">
-            <h2>关于我</h2>
-            <img src="./me.jpg" alt="me" style="width:100%">
-            <ul>
-                <li>姓名：孙士杰</li>
-                <li>电话：18801290186</li>
-                <li>微信：18801290186</li>
-                <li>邮箱：sunsj16@mails.tsinghua.edu.cn</li>
-            </ul>
-            <p>1998年3月8日生于重庆，现就读于清华大学软件学院。</p>
-        </div>
-
-        <div class="card">
-            <h3>热门文章</h3>
-            <h4><a href="./mainpage.html">我想说的</a></h4>
-            <img src="./ximalaya_shanmai-010.jpg" alt="pic" style="width:100%">
-            <p>之前对前端的了解其实并不多……</p>
-        </div>
-
-        <div class="card" id="links">
-            <h3>友情链接</h3>
-            <p>
-                <ul>
-                    <li><a href="http://www.tsinghua.edu.cn" target="_blank">清华大学</a></li>
-                    <li><a href="http://www.nks.edu.cn/" target="_blank">重庆南开中学</a></li>
-                </ul>
-            </p>
-        </div>
-
+        <a href="./page3.html">日志3</a>
     </div>
 
     <div class="right">
 
         <div class="card">
-            <b><a href="./page1.html" target="_blank">我想说的</a></b>
-            <h5>2019 年 7 月 2 日</h5>
-            <img src="./ximalaya_shanmai-010.jpg" alt="pic" style="width: 100%">
-            <p>之前对前端的了解其实并不多，只是大概知道是做一个网站展示给用户看的那一面，涉及到很多美工、 设计方面的内容。希望通过这三周的学习……
-            </p>
-        </div>
-
-        <div class="card">
-            <b><a href="./page2.html" target="_blank">基础实验2</a></b>
-            <h5>2019 年 7 月 3 日</h5>
-            <img src="./chongqing-006.jpg" alt="pic" style="width:100%">
-            <p>第一题：这道题还是比较简单的，只需要将数组中的时间用sort进行排序，注意js的sort最好自行传入一个比较函数，否则可能会出现意想不到……</p>
-        </div>
-
-        <div class="card">
             <b><a href="./page3.html" target="_blank">基础实验4</a></b>
-            <h5>2019 年 7 月 12 日</h5>
-            <img src="./richu-004.jpg" alt="pic" style="width:100%">
-            <p>本次实验……</p>
+            <h5>2019 年 7 月 2 日</h5>
+            <img src="./richu-004.jpg" alt="pic" style="width:100%;">
+            <p>本次实验是一次服务器操作，配置环境还是比较容易的，只要按照说明上敲上去执行就可以。难点在于后面对服务器操作和框架的使用。</p>
+            <p>经过查阅资料和跟同学交流，大概了解的服务器的使用。将网站的静态资源打包上传，再使用express.static()方法，完成了实验的第二步</p>
+            <p>实验的第三部分涉及到API的问题，传进来的文本在req里面，返回的文本写在res里面。对于get型的，可以不使用中间件，检验token（token不通过返回403）后就可以执行函数主题；post型的需要中间件，我选择了multer，经查阅资料，只访问文本可以用none()方法。</p>
+            <p>对于计算其实比较容易，注意传进来的都是字符串，需要用Number()方法进行类型转换，否则加法会有问题，然后将结果生成一个对象，再res.send()回去就可以。</p>
+            <p>对于剩下的设计到存储操作，由于只需要在内存中进行读写，观察到传进来的数据都是一个name和一个key，为了索引方便，我使用一个全局对象cache来保存，其中name为索引，key是键值，简化了代码书写。对于需要返回文本的，将其写到一个成员中send回去；不需要返回文本的使用sendStatus方法传回200.按照文档中要求，对有些错误情况将返回404</p>
+            <p>经过这次实验，我对js的服务器操作有了一定的了解，但是不清楚的还有很多，比如中间件的使用，其实不是特别清楚，希望在今后的学习与工作中有更进一步的了解。</p>
         </div>
 
     </div>
